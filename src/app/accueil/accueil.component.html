@@ -1,6 +1,25 @@
 <DIV class="accueil" align="center">
 
-<p style="color:red">accueil works!</p>
-<h2>Bienvenue sur la page d'accueil !</h2>
+
+    <h2>Formulaire</h2>
+    <div class="mb-3">
+    <form>
+        <p>
+            Nom :   <input type="text" class="form-control" id="1" placeholder="Nom" name="nom" [(ngModel)]="nom">
+
+        </p>
+        <p>
+            Prénom : <input type="text" class="form-control" id="2" placeholder="Prénom" name="prenom" [(ngModel)]="prenom">
+        </p>
+        <p>
+            Date de naissance : <input type="date" class="form-control" id="3" name="dateNaissance" [(ngModel)]="dateNaissance">
+        </p>
+        <p>
+            Image : <input type="text" class="form-control" id="4" placeholder="URL de l'image" name="image" [(ngModel)]="image">
+        </p>
+        <div class="btn-group" role="group" aria-label="Basic example">
+          <button type="button" (click)="afficherProfil()" class="btn btn-primary" >Afficher</button>
+</div>
+    </form>
 <p>Ceci est la page principale de l'application.</p>
-</DIV>
+</div>
