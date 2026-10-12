@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-
+import {ActivatedRoute} from '@angular/router';
+import {Subscription} from 'rxjs';
 @Component({
   selector: 'app-autre',
   standalone: true,
@@ -8,5 +9,17 @@ import { Component } from '@angular/core';
   styleUrl: './autre.component.scss'
 })
 export class AutreComponent {
-
+id !: string;
+nom !: string;
+private routeSub!: Subscription;
+constructor(private route: ActivatedRoute) {}
+ngOnInit() {
+  this.routeSub = this.route.params.subscribe(params => {
+this.id = params['id'];
+this.nom = params['nom']; 
+});
+}
+ngOnDestroy() {
+this.routeSub.unsubscribe();
+}
 }

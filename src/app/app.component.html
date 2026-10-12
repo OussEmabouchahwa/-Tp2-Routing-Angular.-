@@ -6,9 +6,13 @@
       </a>
     </li>
     <li>
-      <a routerLink="/autre">Autre page</a>
+      <a routerLink="/autre/{{valeur}}/{{Valure2}}">Autre page</a>
     </li>
   </ul>
+  <p>
+    <input type="text" [(ngModel)]="valeur" placeholder="Entrez une ID" />
+    <input type="text" [(ngModel)]="Valure2" placeholder="Entrez un nom" />
+  </p>
 </nav>
 <hr />
 <router-outlet></router-outlet>
